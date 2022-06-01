@@ -45,16 +45,15 @@ function Chat({socket, username, room}) {
                     return (
                         <div 
                             className="message" 
-                            id={username === messageContent.author ? "you" : "other"}
+                            id={username === messageContent.author ? "you" : "other"} //sender message in css move to right side
                         >
                             <div> 
                                 <div className="message-content">
                                     <p>{messageContent.message}</p>
-
                                 </div>
                                 <div className="message-meta">
-                                    <p id="time">{messageContent.time}</p>
                                     <p id="author">{messageContent.author}</p>
+                                    <p id="time">{messageContent.time}</p>
                                 </div>
 
                             </div>
